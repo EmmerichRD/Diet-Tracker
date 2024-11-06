@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Profile Management</title>
+  <link rel="stylesheet" href="users-style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>User Profile</h1>
+
+    <!-- Form for user profile creation -->
+    <div id="userForm">
+      <h2>Create / Edit Profile</h2>
+      <form id="profileForm">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br>
+
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" required><br>
+
+        <button type="submit">Save Profile</button>
+      </form>
+    </div>
+
+    <!-- Section to display user profile -->
+    <div id="profileDisplay" class="hidden">
+      <h2>Profile Details</h2>
+      <p><strong>Username:</strong> <span id="displayUsername"></span></p>
+      <p><strong>Email:</strong> <span id="displayEmail"></span></p>
+      <p><strong>Age:</strong> <span id="displayAge"></span></p>
+      <button id="editProfile">Edit Profile</button>
+      <button id="deleteProfile">Delete Profile</button>
+    </div>
+  </div>
+
+  <script src="users-script.js"></script>
+</body>
+</html>
