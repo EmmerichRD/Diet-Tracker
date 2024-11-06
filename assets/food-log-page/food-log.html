@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daily Food Log</title>
+  <link rel="stylesheet" href="food-log-style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Daily Food Log</h1>
+
+    <!-- Search bar for finding foods (Placeholder) -->
+    <div class="search-bar">
+      <input type="text" id="foodSearch" placeholder="Search for food or scan barcode">
+      <button id="searchButton">Search</button>
+    </div>
+
+    <!-- Food Log Form -->
+    <div id="foodForm">
+      <h2>Log Your Meals</h2>
+      <form id="mealForm">
+        <label for="mealType">Meal Type:</label>
+        <select id="mealType" required>
+          <option value="">Select a meal</option>
+          <option value="Breakfast">Breakfast</option>
+          <option value="Lunch">Lunch</option>
+          <option value="Dinner">Dinner</option>
+          <option value="Snacks">Snacks</option>
+        </select><br>
+
+        <label for="foodItem">Food Item:</label>
+        <input type="text" id="foodItem" name="foodItem" required><br>
+
+        <label for="calories">Calories:</label>
+        <input type="number" id="calories" name="calories" required><br>
+
+        <label for="carbs">Carbs (g):</label>
+        <input type="number" id="carbs" name="carbs" required><br>
+
+        <label for="fats">Fats (g):</label>
+        <input type="number" id="fats" name="fats" required><br>
+
+        <label for="proteins">Proteins (g):</label>
+        <input type="number" id="proteins" name="proteins" required><br>
+
+        <button type="submit">Add to Log</button>
+      </form>
+    </div>
+
+    <!-- Display Food Log -->
+    <div id="mealLog">
+      <h2>Meals for Today</h2>
+
+      <!-- Meal sections: Breakfast, Lunch, Dinner, Snacks -->
+      <div class="meal-section" id="Breakfast">
+        <h3>Breakfast</h3>
+        <ul></ul>
+        <p class="totals">Total: <span class="totalCalories">0</span> Calories</p>
+      </div>
+
+      <div class="meal-section" id="Lunch">
+        <h3>Lunch</h3>
+        <ul></ul>
+        <p class="totals">Total: <span class="totalCalories">0</span> Calories</p>
+      </div>
+
+      <div class="meal-section" id="Dinner">
+        <h3>Dinner</h3>
+        <ul></ul>
+        <p class="totals">Total: <span class="totalCalories">0</span> Calories</p>
+      </div>
+
+      <div class="meal-section" id="Snacks">
+        <h3>Snacks</h3>
+        <ul></ul>
+        <p class="totals">Total: <span class="totalCalories">0</span> Calories</p>
+      </div>
+
+      <!-- Daily Nutritional Breakdown -->
+      <div id="dailyBreakdown">
+        <h3>Daily Nutritional Breakdown</h3>
+        <p>Calories: <span id="dailyCalories">0</span> kcal</p>
+        <p>Carbs: <span id="dailyCarbs">0</span> g</p>
+        <p>Fats: <span id="dailyFats">0</span> g</p>
+        <p>Proteins: <span id="dailyProteins">0</span> g</p>
+      </div>
+    </div>
+
+    <!-- Water Intake Tracker -->
+    <div id="waterTracker">
+      <h2>Water Intake</h2>
+      <p>You've consumed <span id="waterIntake">0</span> cups of water today</p>
+      <button id="addWater">Add a cup</button>
+      <button id="resetWater">Reset</button>
+    </div>
+  </div>
+
+  <script src="food-log-script.js"></script>
+</body>
+</html>
