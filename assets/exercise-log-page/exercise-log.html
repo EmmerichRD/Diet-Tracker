@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weekly Exercise Tracker</title>
+  <link rel="stylesheet" href="exercise-log-style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Exercise Tracker</h1>
+
+    <!-- Exercise Log Form -->
+    <div id="exerciseForm">
+      <h2>Log Your Exercise</h2>
+      <form id="logForm">
+        <label for="dayOfWeek">Day of the Week:</label>
+        <select id="dayOfWeek" required>
+          <option value="">Select a day</option>
+          <option value="Monday">Monday</option>
+          <option value="Tuesday">Tuesday</option>
+          <option value="Wednesday">Wednesday</option>
+          <option value="Thursday">Thursday</option>
+          <option value="Friday">Friday</option>
+          <option value="Saturday">Saturday</option>
+          <option value="Sunday">Sunday</option>
+        </select><br>
+
+        <label for="exercise">Exercise:</label>
+        <input type="text" id="exercise" name="exercise" placeholder="e.g., Running, Yoga" required><br>
+
+        <button type="submit">Log Exercise</button>
+      </form>
+    </div>
+
+    <!-- Display Exercise Log -->
+    <div id="exerciseLog">
+      <h2>Exercise Log for the Week</h2>
+      <div id="logDisplay">
+        <div class="day" id="Monday">
+          <h3>Monday</h3>
+          <ul></ul>
+        </div>
+        <div class="day" id="Tuesday">
+          <h3>Tuesday</h3>
+          <ul></ul>
+        </div>
+        <div class="day" id="Wednesday">
+          <h3>Wednesday</h3>
+          <ul></ul>
+        </div>
+        <div class="day" id="Thursday">
+          <h3>Thursday</h3>
+          <ul></ul>
+        </div>
+        <div class="day" id="Friday">
+          <h3>Friday</h3>
+          <ul></ul>
+        </div>
+        <div class="day" id="Saturday">
+          <h3>Saturday</h3>
+          <ul></ul>
+        </div>
+        <div class="day" id="Sunday">
+          <h3>Sunday</h3>
+          <ul></ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="exercise-log-scripts.js"></script>
+</body>
+</html>
